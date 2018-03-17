@@ -29,30 +29,23 @@ class SearchForm extends Component {
     return (
       <div className="search-form">
         <form onSubmit={this.handleFormSubmit}>
-          <Row className="FormInputRow">
-            <Col s={12}>
-              <Row>
-                <Col s={12} className="input-field">
-                  <input 
-                    id="search-query"
-                    name="searchQuery"
-                    type="text"
-                    className="validate"
-                    value={this.state.searchQuery}
-                    onChange={this.handleFormChange}
-                  />
-                  <label htmlFor="searchQuery white-text">Search</label>
-                </Col>
-              </Row>
-              <Row>
-                <Col s={12}>
-                  <button className="btn waves-effect waves-light" id="search-button" type="submit" name="action">Search
-                    <i className="material-icons right" />
-                  </button>
-                </Col>
-              </Row>
+          {/* <Row className="FormInputRow"> */}
+            <Col s={12} className="input-field">
+              <input 
+                id="search-query"
+                name="searchQuery"
+                type="text"
+                className="validate white-text specific"
+                value={this.state.searchQuery}
+                onChange={this.handleFormChange}
+              />
+              <label htmlFor="searchQuery specific">Find Templates</label>
+
+              <button className="btn waves-effect waves-light" id="search-button" type="submit" name="action">Search
+              <i className="material-icons right" />
+              </button>
             </Col>
-          </Row>
+          {/* </Row> */}
         </form>
       </div>
     );
